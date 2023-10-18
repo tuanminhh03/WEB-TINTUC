@@ -100,17 +100,18 @@ ul li{
 
 .content{
     display: flex;
-    margin: 50px 0 0 24px;
+    margin: 20px 0 0 24px;
     justify-content: space-between;
 }
 
 
 .content1{
-    flex-basis: 48%;
+    /* flex-basis: 48%; */
     margin: 0 24px 0 0;
+    width: 1000px;
 }
 .content1 img{
-    width: 100%;
+    /* width: ; */
 }
 
 .content2{
@@ -118,13 +119,19 @@ ul li{
     margin: 0 24px 0 0;
 }
 
+.content2 a>img{
+    width: 781px;
+    height: 400px;
+}
+
+.content2 h3{
+    font-size: 40px;
+}
 .content3{
     flex-basis: 24%;
     margin: 0 24px 0 0;
 }
-.content2 img{
-    width: 105%;
-}
+
 .content3 img{
     width: 100%;
 }
