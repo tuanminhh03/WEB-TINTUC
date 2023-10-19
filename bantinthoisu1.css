@@ -140,3 +140,28 @@ ul li{
     margin: 0 5px;
     text-decoration: none;
 }
+
+
+.content1-title p{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+
+.content{
+    display: flex;
+}
+
+.content1{
+    flex-basis: 75%;
+}
+
+.content2{
+    flex-basis: 25%;
+    padding-left: 35px ;
+    padding-top: 30px;
+}
+.content2 img{
+    width: 100%;
+    /* flex-basis: 20%; */
+}
