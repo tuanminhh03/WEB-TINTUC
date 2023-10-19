@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./bantinthoisu1.css">
+</head>
+<body>
+    <div id="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="left-nav">
+                <a href="#" ><i class="fa-solid fa-bars"  style="color: #ffffff;"></i></a>
+                <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+                <a href="thoisu.html">
+                    <h3>THỜI SỰ</h3>
+                </a>
+                <a href="thoitiet.html">
+                    <h3>THỜI TIẾT</h3>
+                </a>
+                <a href="thethao.html">
+                    <h3>THỂ THAO</h3>
+                </a>
+            </div>
+            <div class="right-nav">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search news...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+          <div class="content1">
+            <a href="./thoisu.html">Thời Sự</a>
+            <div class="main-left">
+              <div class="content-article  livenews">
+                <h1 class="name font1"><span class="sub-title"></span>
+                                Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch						</h1>
+                <div class="text_to_audio">
+                              </div>
+                <div class="date font5 text-six d-flex align-items-center">Thứ 3, 17/10/2023 | 18:52:11 [GMT +7] <span class="d-inline d-md-none ml-auto"><span class="font-default font3">A</span>&nbsp; <span class="font-up font1">A</span></span></div>
+    
+                <div class="social mt-2 d-flex align-items-center">
+                          <div class="savenews mr-1"><span class="btn btn-success btn_savenews btn-sm py-0 font4" data-id="3265002"><i class="fa fa-bookmark"></i> Lưu</span></div>
+            <script>
+                $(function() {
+                    var news_saved = store.get('news_saved') != undefined ? store.get('news_saved') : [];
+                    $('.btn_savenews').click(function(e) {
+                        let id_news = $(this).data('id');
+                        let check = '';
+                        store.each(function(value, key) {
+                            if (id_news == key) {
+                                check = key;
+                            }
+                        });
+                        if (check) {
+                            $('.btn_savenews').removeClass('btn-warning');
+                            $('.btn_savenews').addClass('btn-success');
+                            store.remove(id_news);
+    
+                            let idx = news_saved.indexOf(parseInt(id_news));
+                            news_saved.splice(idx, 1);
+                        } else {
+                            if (news_saved.length > 20) {
+                                news_saved.splice(-1, 1);
+                            }
+                            news_saved.push(id_news);
+                            store.set(id_news, {
+                                id: id_news
+                            });
+    
+                            $(this).removeClass('btn-success');
+                            $(this).addClass('btn-warning');
+                        }
+    
+                        store.set('news_saved', news_saved);
+    
+                    });
+                });
+                $(document).ready(function() {
+                    let check_id = '3265002';
+                    check_id = parseInt(check_id);
+                    store.each(function(value, key) {
+                        if (check_id == key) {
+                            $('.btn_savenews').removeClass('btn-success');
+                            $('.btn_savenews').addClass('btn-warning');
+                        }
+                    });
+    
+                    var news_read = store.get('news_read') != undefined ? store.get('news_read') : [];
+                    if (!news_read.includes(check_id)) {
+                        if (news_read.length > 20) {
+                            news_read.splice(-1, 1);
+                        }
+                        news_read.push(check_id);
+                        store.set('news_read', news_read);
+                    }
+                });
+            </script>
+                              <div class="print_page"><span class="btn btn-success btn_print btn-sm py-0 font4" data-title="Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch" data-url="/print/news/1416285"><i class="fa fa-print"></i> In</span></div>
+            <script>
+                $(function() {
+                    $('.btn_print').click(function(e) {
+                        var w = $(window).width() > 570 ? $(window).width() * 0.8 : 570,
+                            h = $(window).height() * 0.8;
+                        var title = $(this).attr('data-title');
+                        var url = $(this).attr('data-url');
+                        var left = (screen.width / 2) - (w / 2);
+                        var top = (screen.height / 2) - (h / 2);
+                        window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                    });
+    
+                });
+            </script>
+                          <!-- Social Links -->
+            <div class="social-links">
+                
+                                <!-- Facebook Linke & Share -->
+                    <div class="social-item fblike">
+                        <iframe src="//www.facebook.com/plugins/like.php?href=https://baoquangninh.vn/du-kien-trinh-chinh-phu-nghi-tet-tu-29-12-am-lich-3265002.html&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=20&amp;appId=703464450768134" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;width:142px;" allowtransparency="true" data-gtm-yt-inspected-4="true"></iframe>
+                    </div>
+                
+                                <!-- Zalo -->
+                    <div class="social-item zalo mr-1">
+                        <div class="zalo-share-button" data-href="https://baoquangninh.vn/du-kien-trinh-chinh-phu-nghi-tet-tu-29-12-am-lich-3265002.html" data-oaid="579745863508352884" data-layout="1" data-color="blue" data-customize="false" style="position: relative; display: inline-block; width: 70px; height: 20px;">
+                        <iframe id="d92bde58-85c7-4c68-b8ad-b03ead0fd1fc" name="d92bde58-85c7-4c68-b8ad-b03ead0fd1fc" frameborder="0" allowfullscreen="" scrolling="no" width="70px" height="20px" src="https://button-share.zalo.me/share_inline?id=d92bde58-85c7-4c68-b8ad-b03ead0fd1fc&amp;layout=1&amp;color=blue&amp;customize=false&amp;width=70&amp;height=20&amp;isDesktop=true&amp;url=https%3A%2F%2Fbaoquangninh.vn%2Fdu-kien-trinh-chinh-phu-nghi-tet-tu-29-12-am-lich-3265002.html&amp;d=eyJ1cmwiOiJodHRwczovL2Jhb3F1YW5nbmluaC52bi9kdS1raWVuLXRyaW5oLWNoaW5oLXBodS1uZ2hpLXRldC10dS0yOS0xMi1hbS1saWNoLTMyNjUwMDIuaHRtbCJ9&amp;shareType=0" style="position: absolute; z-index: 99; top: 0px; left: 0px;" data-gtm-yt-inspected-4="true"></iframe></div>
+                        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+                    </div>
+                    <!-- </div> -->
+                
+            </div>
+    
+                          <!-- EmailSharing-->
+            <div class="print_page email">
+                <a class="btn btn-success btn_email btn-sm py-0 font4" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=bandoc.quangninh@gmail.com&amp;su=Li%C3%AAn+h%E1%BB%87+v%E1%BB%9Bi+t%C3%B2a+so%E1%BA%A1n&amp;body=https://baoquangninh.vn/du-kien-trinh-chinh-phu-nghi-tet-tu-29-12-am-lich-3265002.html" target="_new">
+                    <i class="fa fa-envelope"></i> Email            </a>
+            </div>
+                </div>
+                            
+                <div class="detail auto-gallery font3 mt-3" id="content-detail">
+                  <div><p><strong>Kỳ nghỉ Tết Giáp Thìn có thể kéo dài 7 ngày, từ 29 tháng chạp Quý Mão đến mùng 5 tháng giêng Giáp Thìn (8-14/2/2024), theo đề xuất của Bộ Lao động Thương binh và Xã hội.</strong></p>
+    <article>
+    <p>Chiều 17/10, ông Mai Đức Thiện, Vụ phó Pháp chế cho biết Bộ Lao động Thương binh và Xã hội đã lấy xong ý kiến về phương án nghỉ Tết Giáp Thìn. "16 đơn vị, bộ ngành đa số đồng tình với phương án 1, tức nghỉ từ 29 tháng chạp", ông nói, thêm rằng cơ quan này sẽ trình Thủ tướng phương án nghỉ 2 ngày trước và 3 ngày sau Tết.</p>
+    <p>Theo phương án này, công chức sẽ đi làm trở lại vào mùng 6 tháng giêng, tức ngày 15/2/2024. Lịch nghỉ này được đánh giá hài hòa, thuận lợi cho người dân mua sắm, đi lại.</p>
+    <img src="https://media.baoquangninh.vn/upload/image/202310/medium/2138364_b5861de9a97224ca546918064dd42f27.jpg" data-allow-ads="true" style="display: block; margin-left: auto; margin-right: auto;"><img src="https://media.baoquangninh.vn/upload/image/202310/medium/2138365_dd6660bb6bc77364204296d4c84d180d.jpg" data-allow-ads="true" style="display: block; margin-left: auto; margin-right: auto;">
+    <p style="text-align: center;">Hai phương án nghỉ Tết Giáp Thìn đều kéo dài 7 ngày, song khác nhau về thời điểm nghỉ. Đồ họa:<span> </span><em>Thành Nam</em></p>
+    <p>Từ năm 2015 đến nay, phần lớn thời điểm nghỉ luôn cận Tết 1-2 ngày, ngoài Tết Bính Thân 2016 nghỉ từ 28 tháng chạp. Thời gian nghỉ Tết Mậu Tuất 2019 kéo dài 9 ngày, cũng từ 28 Âm lịch do liền kề hai cuối tuần, song thực tế bắt đầu từ 30 tháng chạp nếu tính ngày nghỉ chính thức.</p>
+    <p>Lịch nghỉ Tết Nguyên đán hàng năm áp dụng cho công chức nhà nước, song Bộ Lao động Thương binh và Xã hội khuyến khích doanh nghiệp cho người lao động nghỉ như trên, thông báo trước 30 ngày.</p>
+    </article>
+    <figure class="image  image-full-gray align-center"><img src="https://media.baoquangninh.vn/upload/image/202310/medium/2138366_52af7651edd6d6ec7a2a437965b6d4fb.jpg" data-allow-ads="true" class="image-full-gray">
+    <figcaption>Nông dân Nhật Tân (Hà Nội) thu hoạch đào trước Tết nguyên đán. Ảnh: Giang Huy</figcaption>
+    </figure>
+    <article>
+    <p>Việt Nam có 5 kỳ nghỉ lễ, Tết với 11 ngày chính thức trong năm. Nếu ngày lễ rơi vào cuối tuần, lao động sẽ được nghỉ bù vào ngày làm việc kế tiếp, thuận tiện để nghỉ ngơi, về quê hoặc đi du lịch.</p>
+    <p>Người lao động làm thêm giờ, làm việc ban đêm dịp này được hưởng lương ít nhất bằng 300% so với ngày thường. Người nước ngoài làm việc tại Việt Nam ngoài lịch chung được nghỉ thêm một ngày Tết cổ truyền và một ngày Quốc khánh của nước họ.</p>
+    </article></div>
+                                            </div>
+                <div class="pen-name text-right font-weight-bold">Theo Vnexpress.net</div>						<div class="original-source text-right mt-3 mb-3"><a class=" font-italic text-inverse" href="https://vnexpress.net/du-kien-trinh-chinh-phu-nghi-tet-tu-29-12-am-lich-4660476.html" target="_blank"><i class="fa fa-hand-o-right"></i> Đọc bài gốc tại đây </a></div>
+                            <!-- relates -->
+                <div class="relates">
+                              </div>
+    
+                <div class="row"><div class="col-md-12"><div class="ads-zone-group zonegroup-shareflip" id="ads-zone-13" data-id="13" data-type="shareflip" data-position="ads_article_detail_bottom" data-timeflip="1000"></div></div></div>
+                              <!-- comment -->
+                  <section class="box-comments p-0 mt-2">
+        <h3 class="comments-heading">Ý kiến (<span class="total-comment">0</span>)</h3>
+        <div class="comments-area" data-post-id="1416285" data-module="news">
+            <div id="comments-post-form" class="comments-form comments-post-form">
+                <div class="form-input">
+                    <textarea class="input-message rounded-0" name="message" placeholder="Ý kiến bạn đọc"></textarea>
+                    <span class="input-alert">
+                        <span class="input-counter">0</span> / <span class="input-max">500</span> ký tự
+                    </span>
+                </div>
+                <div class="comments-not-login">
+                    <div class="form-group row">
+                        <div class="col-md-5">
+                            <div class="form-input">
+                                <input type="text" class="input-text" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-input">
+                                <input type="email" class="input-text" name="full_name" placeholder="Họ tên">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-btn">
+                                <button type="button" value="Gửi" class="quick-comments-btn" id="quick-comments-post-btn">Gửi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-auth">
+                    <div class="box-left font5">
+                        <div class="auth-link" id="comments-auth">Hãy <a href="javascript:;">đăng nhập</a> hoặc <a href="javascript:;">tạo tài khoản</a> để bình luận</div>
+                        <a class="user-avatar" href="">
+                            <img src="https://media.baoquangninh.vn/assets/images/avatar.jpg" alt="">
+                            <span>Guest</span>
+                        </a>
+                    </div>
+                    <div class="box-right">
+                        <button type="button" value="Gửi" class="comments-btn" id="comments-post-btn">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-filter d-none">
+                <a href="javascript:;" class="active" data-filter="like">Quan tâm nhất</a>
+                <a href="javascript:;" data-filter="time">Mới nhất</a>
+            </div>
+            <div class="comments-list" id="comments-list"></div>
+            <div class="comments-loading comments-loading-post"><img src="/assets/images/load3.gif" title="Đang tải dữ liệu" alt="Đang tải dữ liệu"></div>
+        </div>
+    </section>
+    <script src="/assets/js/plugins/mustache/mustache.min.js" defer=""></script>						
+                              <!-- tags -->
+                  <ul class="tags">
+                <li><span>Tags</span></li><li><a href="/tags/?tag=Dự+kiến">Dự kiến</a></li><li><a href="/tags/?tag=trình+Chính+phủ"> trình Chính phủ</a></li><li><a href="/tags/?tag=nghỉ+Tết+Âm+lịch"> nghỉ Tết Âm lịch</a></li></ul>											</div>
+              <div class="block-news mt-3">
+                <h2 class="title mb-3">
+                  <a href="javascript:;">
+                    <span class="main-title">Cùng chuyên mục</span>
+                  </a>
+                </h2>
+                <div class="body-block">
+                  <div class="row">
+                                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/noi-ket-noi-nhung-cuu-nu-chien-si-truong-son-3264981.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202310/thumbnail/2138221_2138220_ban_lien_lac_hoi_nu_chien_si_truong_son_tp_ha_long_tham_gia_bieu_dien_van_nghe_chao_mung_dai_hoi_hoi_nan_nhan_da_cam_dioxin_phuong_ha_lam_anh__12060017.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202310/thumbnail/2138221_2138220_ban_lien_lac_hoi_nu_chien_si_truong_son_tp_ha_long_tham_gia_bieu_dien_van_nghe_chao_mung_dai_hoi_hoi_nan_nhan_da_cam_dioxin_phuong_ha_lam_anh__12060017.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202310/thumbnail/2138221_2138220_ban_lien_lac_hoi_nu_chien_si_truong_son_tp_ha_long_tham_gia_bieu_dien_van_nghe_chao_mung_dai_hoi_hoi_nan_nhan_da_cam_dioxin_phuong_ha_lam_anh__12060017.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Nơi kết nối những cựu nữ chiến sĩ Trường Sơn">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Nơi kết nối những cựu nữ chiến sĩ Trường Sơn">
+                        <a href="/noi-ket-noi-nhung-cuu-nu-chien-si-truong-son-3264981.html">
+                                                    <span class="main-title">
+                                                            Nơi kết nối những cựu nữ chiến sĩ Trường Sơn                                                    </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/nang-cao-chat-luong-ban-hanh-van-ban-quy-pham-phap-luat-3265091.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202310/thumbnail/2138218_hoi_dong_phoi_hop_pho_bien_giao_duc_phap_luat_tp_uong_bi_pho_bien_phap_luat_cho_ba_con_dtts_tren_dia_ban_phuong_vang_danh_anh_yen_vy_11452017.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202310/thumbnail/2138218_hoi_dong_phoi_hop_pho_bien_giao_duc_phap_luat_tp_uong_bi_pho_bien_phap_luat_cho_ba_con_dtts_tren_dia_ban_phuong_vang_danh_anh_yen_vy_11452017.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202310/thumbnail/2138218_hoi_dong_phoi_hop_pho_bien_giao_duc_phap_luat_tp_uong_bi_pho_bien_phap_luat_cho_ba_con_dtts_tren_dia_ban_phuong_vang_danh_anh_yen_vy_11452017.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Nâng cao chất lượng ban hành văn bản quy phạm pháp luật">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Nâng cao chất lượng ban hành văn bản quy phạm pháp luật">
+                        <a href="/nang-cao-chat-luong-ban-hanh-van-ban-quy-pham-phap-luat-3265091.html">
+                                                    <span class="main-title">
+                                                            Nâng cao chất lượng ban hành văn bản quy phạm pháp luật                                                    </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/tu-15-gio-tam-ngung-cap-phep-cho-cac-phuong-tien-du-lich-bien-3265273.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202307/thumbnail/2106384_vinh_ha_long_la_ve_dep_ket_hop_tu_dat_nuoc_va_bau_troi_anh_do_phuong_10004320.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202307/thumbnail/2106384_vinh_ha_long_la_ve_dep_ket_hop_tu_dat_nuoc_va_bau_troi_anh_do_phuong_10004320.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202307/thumbnail/2106384_vinh_ha_long_la_ve_dep_ket_hop_tu_dat_nuoc_va_bau_troi_anh_do_phuong_10004320.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Từ 15 giờ ngày 19/10: Tạm ngừng cấp phép cho các phương tiện thuỷ ra khơi">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Từ 15 giờ ngày 19/10: Tạm ngừng cấp phép cho các phương tiện thuỷ ra khơi">
+                        <a href="/tu-15-gio-tam-ngung-cap-phep-cho-cac-phuong-tien-du-lich-bien-3265273.html">
+                                                    <span class="main-title">
+                                                            Từ 15 giờ ngày 19/10: Tạm ngừng cấp phép cho các phương tiện thuỷ ra khơi                                                    </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/khong-de-benh-dau-mat-do-lay-lan-rong-3264962.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202310/thumbnail/2137913_dau_mat_do_14520816.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202310/thumbnail/2137913_dau_mat_do_14520816.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202310/thumbnail/2137913_dau_mat_do_14520816.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Không để bệnh đau mắt đỏ lây lan rộng">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Không để bệnh đau mắt đỏ lây lan rộng">
+                        <a href="/khong-de-benh-dau-mat-do-lay-lan-rong-3264962.html">
+                                                    <span class="main-title">
+                                                            Không để bệnh đau mắt đỏ lây lan rộng                                                    </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/phu-nu-quang-ninh-huong-ve-ngay-thanh-lap-tinh-3264789.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202310/thumbnail/2137943_161023_dan_vu_cp_16070416.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202310/thumbnail/2137943_161023_dan_vu_cp_16070416.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202310/thumbnail/2137943_161023_dan_vu_cp_16070416.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Phụ nữ Quảng Ninh hướng về ngày thành lập tỉnh">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Phụ nữ Quảng Ninh hướng về ngày thành lập tỉnh">
+                        <a href="/phu-nu-quang-ninh-huong-ve-ngay-thanh-lap-tinh-3264789.html">
+                                                    <span class="main-title">
+                                                            Phụ nữ Quảng Ninh hướng về ngày thành lập tỉnh                            <span class="icon icon-image"><i class="fa fa-picture-o"></i></span>                        </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                          <div class="col-sm-6 col-md-4 mb-3">
+                                      <article class="card card-style-less ">
+                    <div class="card-content">
+    
+                                                                <div class="card-thumb thumb166">
+                        <a href="/suat-an-ban-tru-32-000-dong-gay-xon-xao-tam-dung-bep-an-tu-ngay-19-10-3265229.html">
+                                                        <img class="card-img " src="https://media.baoquangninh.vn/upload/image/202310/thumbnail/2138872_0cee588e495af144762c92f65f9cd9d0.jpg" srcset="https://media.baoquangninh.vn/thumb/420x252/upload/image/202310/thumbnail/2138872_0cee588e495af144762c92f65f9cd9d0.jpg 400w, https://media.baoquangninh.vn/thumb/600x360/upload/image/202310/thumbnail/2138872_0cee588e495af144762c92f65f9cd9d0.jpg 800w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Suất ăn bán trú 32.000 đồng gây xôn xao: Tạm dừng bếp ăn từ ngày 19/10">
+                                                </a>
+                                        </div>
+                                            <div class="card-body">
+                                <h3 class="card-title" title="Suất ăn bán trú 32.000 đồng gây xôn xao: Tạm dừng bếp ăn từ ngày 19/10">
+                        <a href="/suat-an-ban-tru-32-000-dong-gay-xon-xao-tam-dung-bep-an-tu-ngay-19-10-3265229.html">
+                                                    <span class="main-title">
+                                                            Suất ăn bán trú 32.000 đồng gây xôn xao: Tạm dừng bếp ăn từ ngày 19/10                                                    </span>
+                        </a>
+                    </h3>
+                
+                                        <!-- -->
+    
+                        </div>
+                                        </div>
+                </article>
+                                    </div>
+                                                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                  <li>Thời sự</li>
+                  <li>Thời tiết</li>
+                  <li>Thể thao</li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: 123-456-7890</p>
+              </div>
+            </div>
+            <div class="footer-section social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+    </div>
+    </div>
+
+</body>
+</html>
