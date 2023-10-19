@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="thoitiet.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Document</title>
-    <script src="thoitiet.js"></script>
 </head>
 <body>
     <div class="container">
@@ -23,34 +23,60 @@
                 <a href="thethao.html">
                     <h3>THỂ THAO</h3>
                 </a>
+                
             </div>
             <div class="right-nav">
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search news...">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </div>
         <div class="headline">
             <h1><a href="">Thời tiết</a></h1>
         </div>
-        <!-- <div class="weather">
-            <div class="left-info">
-                <img src="weather/sun.svg" alt="" >
-                <span >32</span>&deg
-            </div>
+        <div class="weather-container">
             <div class="right-info">
-                <div class="city">
-                    weather
+                <div class="info-img">
+                    <img id="weather-icon" src="" alt="" style="width: 140px;">
                 </div>
-                <div class="temp">
-                    51
+                <div class="info">
+                    <h1 id="location"></h1>
+                    <h2 id="temperature"></h2>
+                    <p id="description"></p>
+                    <p id="min-temperature"></p>
+                    <span id="max-temperature"></span>
+                    <p id="humidity"></p>
                 </div>
-                <div class="description">cloudy</div>
-                <div class="humidity">60%</div>
-                <div class="wind">15km</div>
             </div>
-        </div> -->
+        </div>
+        <!-- <div id="forecast-container">
+            <h1>4-Day Weather Forecast</h1>
+            <div class="day-forecast">
+                <p id="day-1-date"></p>
+                <img id="day-1-icon" src="" alt="">
+                <p id="day-1-temperature"></p>
+                <p id="day-1-description"></p>
+            </div>
+            <div class="day-forecast">
+                <p id="day-2-date"></p>
+                <img id="day-2-icon" src="" alt="">
+                <p id="day-2-temperature"></p>
+                <p id="day-2-description"></p>
+            </div>
+            <div class="day-forecast">
+                <p id="day-3-date"></p>
+                <img id="day-3-icon" src="" alt="">
+                <p id="day-3-temperature"></p>
+                <p id="day-3-description"></p>
+            </div>
+            <div class="day-forecast">
+                <p id="day-4-date"></p>
+                <img id="day-4-icon" src="" alt="">
+                <p id="day-4-temperature"></p>
+                <p id="day-4-description"></p>
+            </div>
+        </div>   -->
         <div class="content">
             <div class="news">
                 <div class="new-story">
@@ -125,5 +151,7 @@
             </div>
           </div>
     </div>
+
+    <script src="thoitiet.js"></script>
 </body>
 </html>

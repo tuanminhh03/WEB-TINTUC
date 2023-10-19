@@ -12,9 +12,11 @@ body{
 
 .header{
     display: flex;
-    /* margin: 0 30px; */
     width: 100%;
     background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 500;
 }
 i{
     margin: 0 30px;
@@ -64,28 +66,39 @@ a:hover {
 
 
 
-.search-box{
+.right-nav{
+    flex-basis: 40%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.search-box{
     margin-top: 12px;
     background-color: #fff;
     border-radius: 12px;
-    width: 280px;
+    /* width: 280px; */
     height: 30px;
 }
-input{
-    flex: 1;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 18px;
-    margin-left: 6px;
-}
-button{
-    background: transparent;
-    outline: 0;
+#searchInput {
+    padding: 8px ;
     border: 0px;
+    outline: 0;
+    border-radius: 3px;
+    background: transparent;
+}
+
+#searchBtn{
+    background: transparent;
+    border: none;
     cursor: pointer;
+    vertical-align: middle;
+}
+#searchBtn i{
+    margin: 0 8px 0 0;
+    padding: 0;
 }
 
 
@@ -126,20 +139,58 @@ button{
 
 
 
-.right-info{
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    width: 50%;
-}
-.info-box{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.weather-container {
+    border: 1px solid gray;
+    border-radius: 16px;
+    margin: 24px 400px;
+    padding: 8px;
 }
 
+#location {
+    font-size: 24px;
+}
+
+#temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#min-temperature{
+    display: inline-flex;
+}
+
+#min-temperature, #max-temperature, #humidity{
+    font-size: 18px;
+    margin-top: 4px;
+    color: gray;
+}
+#description{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+#description::first-letter{
+    text-transform: uppercase;
+}
+
+.right-info{
+    justify-content: center;
+    display: flex;
+}
+.info-img {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.day-forecast {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 
 
