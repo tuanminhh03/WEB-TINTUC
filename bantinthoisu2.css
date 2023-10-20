@@ -12,9 +12,11 @@ body{
 
 .header{
     display: flex;
-    /* margin: 0 30px; */
     width: 100%;
     background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 500;
 }
 i{
     margin: 0 30px;
@@ -30,7 +32,8 @@ i{
     height: 50px;
     line-height: 50px;
     vertical-align: middle;
-    width: 70%;
+    width: 60%;
+    flex-basis: 70%;
 }
 
 
@@ -64,28 +67,135 @@ a:hover {
 
 
 
-.search-box{
+
+.right-nav{
+    flex-basis: 40%;
     display: flex;
+    flex-direction: row;
+}
+
+
+
+.weather-container{
+    display: flex;
+    position: relative;
+}
+.weather-container span{
+    display: inline-flex;
+    color: white;
     align-items: center;
-    margin-top: 12px;
+}
+.weather-container img{
+    width: 35%;
+}
+
+
+.search-box{
+    margin-top: 10px;
     background-color: #fff;
     border-radius: 12px;
-    width: 280px;
+    /* width: 280px; */
     height: 30px;
 }
-input{
-    flex: 1;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 18px;
-    margin-left: 6px;
-}
-button{
-    background: transparent;
-    outline: 0;
+#searchInput {
+    padding: 8px ;
     border: 0px;
+    outline: 0;
+    border-radius: 3px;
+    background: transparent;
+}
+
+#searchBtn{
+    background: transparent;
+    border: none;
     cursor: pointer;
+    vertical-align: middle;
+}
+#searchBtn i{
+    margin: 0 8px 0 0;
+    padding: 0;
+}
+
+
+.gopy{
+    padding: 8px 0 0 20px;
+}
+
+.gopy label{
+    padding: 0 24px 0 0;
+    font-size: 120%;
+}
+
+#open-feedback-button {
+    background-color: #000000;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 100%;
+}
+  
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content {
+    background-color: #efefef;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.gopy input{
+    width: 100%;
+    padding: 0 0 0 6px;
+    margin: 10px 0;
+    height: 40px;
+    font-size: 130%;
+    outline: 0;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 6px;
+}
+.gopy textarea{
+    width: 100%;
+    padding: 0 0 0 6px;
+    margin: 10px 0;
+    outline: 0;
+    font-size: 160%;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 6px;
+}
+.modal-content button{
+    width: 20%;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #d9d6d6;
+    margin-top: 8px;
+}
+.modal-content button:hover{
+    background-color: #bebebe;
 }
 
 
@@ -109,11 +219,13 @@ ul li{
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    margin: 0 100px 12px 100px;
+    justify-content: space-around;
 }
 
 .footer-section {
     margin: 10px;
+    flex-basis: 30%;
 }
 
 .footer-section h4 {
@@ -129,10 +241,14 @@ ul li{
     margin-bottom: 5px;
 }
 
-.footer-section .social-media {
+.footer-section .social-media{
+    margin: 0;
+}
+
+.footer-section .social-media-icon {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .footer a {
@@ -142,8 +258,9 @@ ul li{
 }
 
 
+
 .content1-title p{
-    font-size: 30px;
+    font-size: 140%;
     padding-bottom: 20px;
 }
 
@@ -155,12 +272,20 @@ ul li{
 
 .content{
     display: flex;
+    margin: 32px 24px 0 24px;
 }
 
 .content1{
     flex-basis: 75%;
 }
+.content1 p{
+    padding 8px 0;
+}
 
+.content1 img{
+    width: 70%;
+    padding: 8px 0 8px 80px;
+}
 .content2{
     flex-basis: 25%;
     padding-left: 35px ;
@@ -183,6 +308,7 @@ ul li{
     padding: 40px 0;
     border-bottom: 1px dashed #333;
     border-top: 1px dashed #333;
+    flex-direction: column;
 }
 
 .content2-1 img{
@@ -190,7 +316,6 @@ ul li{
 }
 
 .content2-1 h3{
-    padding-left: 20px;
     padding-top: 20px;
 }
 .right-nav{
@@ -218,7 +343,7 @@ ul li{
     to {
       opacity: 1; 
     }
-  }
+}
 
   /* Áp dụng animation cho các phần tử */
   .content2 img,
@@ -226,4 +351,4 @@ ul li{
   .content2-1 {
     opacity: 1; /* Đặt opacity ban đầu thành 0 */
     animation: fadeIn 2s ease-in-out; 
-  }
+}

@@ -91,7 +91,7 @@ a:hover {
 
 
 .search-box{
-    margin-top: 12px;
+    margin-top: 10px;
     background-color: #fff;
     border-radius: 12px;
     /* width: 280px; */
@@ -117,6 +117,88 @@ a:hover {
 }
 
 
+.gopy{
+    padding: 8px 0 0 20px;
+}
+
+.gopy label{
+    padding: 0 24px 0 0;
+    font-size: 120%;
+}
+
+#open-feedback-button {
+    background-color: #000000;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 100%;
+}
+  
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content {
+    background-color: #efefef;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.gopy input{
+    width: 100%;
+    padding: 0 0 0 6px;
+    margin: 10px 0;
+    height: 40px;
+    font-size: 130%;
+    outline: 0;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 6px;
+}
+.gopy textarea{
+    width: 100%;
+    padding: 0 0 0 6px;
+    margin: 10px 0;
+    outline: 0;
+    font-size: 160%;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 6px;
+}
+.modal-content button{
+    width: 20%;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #d9d6d6;
+    margin-top: 8px;
+}
+.modal-content button:hover{
+    background-color: #bebebe;
+}
+
+
 
 img:hover{
     color: #d0cdcd;
@@ -129,15 +211,14 @@ ul li{
 
 .content{
     display: flex;
-    margin: 20px 0 0 24px;
+    margin: 20px 24px 0 24px;
     justify-content: space-between;
 }
 
 
 .content1{
-    flex-basis: 48%;
+    flex-basis: 50%;
     margin: 0 24px 0 0;
-    /* width: 1000px; */
 }
 .content1 img{
     width: 100%;
@@ -146,19 +227,18 @@ ul li{
 .content2{
     flex-basis: 24%;
     margin: 0 24px 0 0;
-    width: 100%;
 }
 
 .content2 img{
-    width: 500px;
+    width: 100%;
+    height: 190.58px;
 }
 
 .content2 h3{
-    font-size: 30px;
+    font-size: 150%;
 }
 .content3{
     flex-basis: 24%;
-    margin: 0 24px 0 0;
 }
 
 .content3 img{
@@ -179,11 +259,13 @@ ul li{
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    margin: 0 100px 12px 100px;
+    justify-content: space-around;
 }
 
 .footer-section {
     margin: 10px;
+    flex-basis: 30%;
 }
 
 .footer-section h4 {
@@ -199,14 +281,14 @@ ul li{
     margin-bottom: 5px;
 }
 
-.footer-section a{
-    
+.footer-section .social-media{
+    margin: 0;
 }
 
-.footer-section .social-media {
+.footer-section .social-media-icon {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .footer a {
@@ -214,49 +296,3 @@ ul li{
     margin: 0 5px;
     text-decoration: none;
 }
-.gopy{
-    padding-top: 10px;
-    padding-left: 20px;
-    
-}
-/* Style for the feedback button */
-#open-feedback-button {
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  /* Style for the feedback modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    height: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    /* display: block; */
-  }
-
-  .close {
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  /* Additional styles for form elements can be added here */
-  

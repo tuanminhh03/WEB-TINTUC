@@ -3,41 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="./bantinthoisu2.css">
 </head>
 <body>
     <div id="main">
-        <!-- Header -->
         <div class="header">
-            <div class="left-nav">
-                <a href="#" ><i class="fa-solid fa-bars"  style="color: #ffffff;"></i></a>
-                <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
-                <a href="thoisu.html">
-                    <h3>THỜI SỰ</h3>
-                </a>
-                <a href="thoitiet.html">
-                    <h3>THỜI TIẾT</h3>
-                </a>
-                <a href="thethao.html">
-                    <h3>THỂ THAO</h3>
-                </a>
-            </div>
-            <div class="right-nav">
-                <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search news...">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <div class="left-nav">
+              <a href="#" ><i class="fa-solid fa-bars"  style="color: #ffffff;"></i></a>
+              <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+              <a href="thoisu.html">
+                  <h3>THỜI SỰ</h3>
+              </a>
+              <a href="thoitiet.html">
+                  <h3>THỜI TIẾT</h3>
+              </a>
+              <a href="thethao.html">
+                  <h3>THỂ THAO</h3>
+              </a>
+          </div>
+          <div class="right-nav">
+              <div class="weather-container">
+                  <img id="weather-icon" src="" alt="" style="display: inline-flex">
+                  <span id="temperature"></span>
+              </div>
+              <div class="search-box">
+                  <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                  <button id="searchBtn"><i class="fas fa-search"></i></button>
+              </div>
+              <div class="gopy">
+                <button id="open-feedback-button">Góp ý</button>
+                <div id="feedback-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="close-feedback">&times;</span>
+                        <h2 style="padding: 0 0 8px 0; font-size: 200%">Góp ý</h2>
+                        <form>
+                        <input type="text" id="name" placeholder="Tên..." name="name" required>
+                        <br>
+                        <input type="text" id="phone" placeholder="Số điện thoại..." name="phone" required>
+                        <br>
+                        <textarea id="message" placeholder="Nội dung góp ý..." name="message" required style="width: 100%; height: 70px"></textarea>
+                        <br>
+                        <button type="submit">Gửi</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+          </div>
+      </div>
         <div class="content">
           <div class="content1">
-            <a href="./thoitiet.html" style="font-size: 30px; border-bottom: 2px solid red;">Thời Tiết</a>
-            <h3 style="font-size: 70px;">Tin mưa lớn từ chiều 16/10 và dự báo thời tiết 10 ngày tới</h3>
-            <p style="color: #666666 ;">Thứ 3, 17/10/2023 | 18:52:11 [GMT +7]</p>
+            <h1><a href="./thoitiet.html" style="font-size: 90%; padding: 12px 0 24px 0">Thời Tiết</a></h1>
+            <h3 style="font-size: 260%;">Tin mưa lớn từ chiều 16/10 và dự báo thời tiết 10 ngày tới</h3>
+            <p style="color: #666666; padding: 16px 0; font-size: 120%">Thứ 3, 17/10/2023 | 18:52:11 [GMT +7]</p>
             <div class="content1-title">
-              <h3 style="font-size: 30px;">(VTC News) - Từ nay đến 18/10, khu vực Nam Hà Tĩnh đến Quảng Trị có mưa vừa, mưa to với lượng mưa phổ biến từ 50-100mm, có nơi trên 200mm.</h3>
+              <h3 style="font-size: 180%;"> Từ nay đến 18/10, khu vực Nam Hà Tĩnh đến Quảng Trị có mưa vừa, mưa to với lượng mưa phổ biến từ 50-100mm, có nơi trên 200mm.</h3>
               <p>Trung tâm Dự báo khí tượng thủy văn quốc gia vừa phát đi bản tin dự báo mưa lỡn khu vực Nam Hà Tĩnh đến Quảng Ngãi và dự báo thời tiết 10 ngày tới (tối 16/10 đến ngày 25/10).</p>
               <p>Theo đó, trong đêm qua và sáng nay (16/10), khu vực Thừa Thiên Huế đến Quảng Ngãi có mưa vừa, mưa to, có nơi mưa rất to. Các khu vực Tây Nguyên, Nam Bộ và các nơi khác ở Nam Trung Bộ có mưa rào và dông, cục bộ có mưa vừa, mưa to.</p>
               <p>Lượng mưa tính từ 19h ngày 15/10 đến 8h ngày 16/10 có nơi trên 50mm như: Hải Phong (Quảng Trị) 69,2mm, Núi Thành (Quảng Nam) 67,6mm, Bình Thuận (Quảng Ngãi) 121,4mm, Lộc Trì (Thừa Thiên Huế) 110,6mm, Sơn Tân (Khánh Hoà) 51,8mm, Quốc Oai (Lâm Đồng) 100,6mm, Tân Phú (Bến Tre) 115,4mm, Tân Thông Hội (TP.HCM) 102.8mm, Tân Phú (An Giang) 101,4mm,…</p>
@@ -62,8 +83,8 @@
             </div>
           </div>
           <div class="content2">
-            <img src="https://media.baoquangninh.vn/upload/image/202203/medium/1950933_qn_15530016.jpg" alt="">
-            <img src="https://media.baoquangninh.vn/upload/image/202309/medium/2127796_bia_nen_09573620.jpg" alt="">
+            <a href=""><img src="https://media.baoquangninh.vn/upload/image/202203/medium/1950933_qn_15530016.jpg" alt=""></a>
+            <a href=""><img src="https://media.baoquangninh.vn/upload/image/202309/medium/2127796_bia_nen_09573620.jpg" alt=""></a>
             <h3 style="font-size: 30px; color: #666666; padding-top: 30px;">Xem Thêm</h3>
             <div class="content2-1">
               <a href="bantinthoisu1.html"><img src="https://i1-vnexpress.vnecdn.net/2023/10/17/HUY22961612274548-1697171306-6979-1697534423.jpg?w=680&h=408&q=100&dpr=2&fit=crop&s=b8kLc5ejg3VB4Yu4DVhVjA" alt=""></a>
@@ -86,33 +107,33 @@
         </div>
         <!-- Footer -->
         <div class="footer">
-            <div class="footer-content">
-              <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="footer-section">
-                <h4>Categories</h4>
-                <ul>
-                  <li>Thời sự</li>
-                  <li>Thời tiết</li>
-                  <li>Thể thao</li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: 123-456-7890</p>
-              </div>
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>About Us</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="footer-section social-media">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-section">
+              <h4>Contact Us</h4>
+              <p>Email: info@gmail.com</p>
+              <p>Phone: 123-456-7890</p>
             </div>
+            <div class="footer-section">
+              <div class="footer-section social-media">
+                  <h4>Follow us</h4>
+                  <div class="footer-section social-media-icon">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
           </div>
+      </div>
+      <div class="information">
+          <h4>Bản quyền được làm bởi M&M </h4>
+      </div>
     </div>
     </div>
 
+    <script src="bantinthoisu.js"></script>
 </body>
 </html>

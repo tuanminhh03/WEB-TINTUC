@@ -24,3 +24,51 @@ async function getWeatherData(city) {
 getWeatherData('HaNoi');
 
 
+var swipeContainer = document.querySelector('.livescore');
+        var swipeList = document.querySelector('.match');
+        var prevButton = document.getElementById('prevButton');
+        var nextButton = document.getElementById('nextButton');
+      
+        var currentIndex = 0;
+        var itemWidth = swipeContainer.offsetWidth / 1;
+      
+        prevButton.addEventListener('click', function() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            swipeList.style.transform = 'translateX(' + (currentIndex * -itemWidth) + 'px)';
+          }
+        }
+        );
+      
+        nextButton.addEventListener('click', function() {
+          if (currentIndex < 2) {
+            currentIndex++;
+            swipeList.style.transform = 'translateX(' + (currentIndex * -itemWidth) + 'px)';
+          }
+        }
+        );
+
+
+var modal = document.getElementById("feedback-modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("open-feedback-button");
+
+        // Get the element to close the modal
+        var closeBtn = document.getElementById("close-feedback");
+
+        // When the user clicks on the button, open the modal
+        btn.addEventListener("click", function() {
+            modal.style.display = "block";
+        });
+
+        // When the user clicks on (x) or outside the modal, close it
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });

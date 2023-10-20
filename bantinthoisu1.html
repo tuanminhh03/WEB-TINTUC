@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="./bantinthoisu1.css">
 </head>
@@ -11,20 +11,20 @@
     <div id="main">
         <!-- Header -->
         <div class="header">
-            <div class="left-nav">
-                <a href="#" ><i class="fa-solid fa-bars"  style="color: #ffffff;"></i></a>
-                <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
-                <a href="thoisu.html">
-                    <h3>THỜI SỰ</h3>
-                </a>
-                <a href="thoitiet.html">
-                    <h3>THỜI TIẾT</h3>
-                </a>
-                <a href="thethao.html">
-                    <h3>THỂ THAO</h3>
-                </a>
-            </div>
-            <div class="right-nav">
+          <div class="left-nav">
+              <a href="#" ><i class="fa-solid fa-bars"  style="color: #ffffff;"></i></a>
+              <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+              <a href="thoisu.html">
+                  <h3>THỜI SỰ</h3>
+              </a>
+              <a href="thoitiet.html">
+                  <h3>THỜI TIẾT</h3>
+              </a>
+              <a href="thethao.html">
+                  <h3>THỂ THAO</h3>
+              </a>
+          </div>
+          <div class="right-nav">
               <div class="weather-container">
                   <img id="weather-icon" src="" alt="" style="display: inline-flex">
                   <span id="temperature"></span>
@@ -33,13 +33,31 @@
                   <input type="text" id="searchInput" placeholder="Tìm kiếm">
                   <button id="searchBtn"><i class="fas fa-search"></i></button>
               </div>
+              <div class="gopy">
+                <button id="open-feedback-button">Góp ý</button>
+                <div id="feedback-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="close-feedback">&times;</span>
+                        <h2 style="padding: 0 0 8px 0; font-size: 200%">Góp ý</h2>
+                        <form>
+                        <input type="text" id="name" placeholder="Tên..." name="name" required>
+                        <br>
+                        <input type="text" id="phone" placeholder="Số điện thoại..." name="phone" required>
+                        <br>
+                        <textarea id="message" placeholder="Nội dung góp ý..." name="message" required style="width: 100%; height: 70px"></textarea>
+                        <br>
+                        <button type="submit">Gửi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
           </div>
-        </div>
+      </div>
         <div class="content">
           <div class="content1">
-            <a href="./thoisu.html" style="font-size: 30px; border-bottom: 2px solid red;">Thời Sự</a>
-            <h3 style="font-size: 35px;">Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch</h3>
-            <p style="color: #666666 ;">Thứ 3, 17/10/2023 | 18:52:11 [GMT +7]</p>
+            <h1><a href="./thoisu.html" style="font-size: 90%; padding: 12px 0 24px 0">Thời Sự</a></h1>
+            <h3 style="font-size: 260%;">Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch</h3>
+            <p style="color: #666666; padding: 16px 0; font-size: 120%">Thứ 3, 17/10/2023 | 18:52:11 [GMT +7]</p>
             <div class="content1-title">
               <p>Kỳ nghỉ Tết Giáp Thìn có thể kéo dài 7 ngày, từ 29 tháng chạp Quý Mão đến mùng 5 tháng giêng Giáp Thìn (8-14/2/2024), theo đề xuất của Bộ Lao động Thương binh và Xã hội.</p>
               <p>Chiều 17/10, ông Mai Đức Thiện, Vụ phó Pháp chế cho biết Bộ Lao động Thương binh và Xã hội đã lấy xong ý kiến về phương án nghỉ Tết Giáp Thìn. "16 đơn vị, bộ ngành đa số đồng tình với phương án 1, tức nghỉ từ 29 tháng chạp", ông nói, thêm rằng cơ quan này sẽ trình Thủ tướng phương án nghỉ 2 ngày trước và 3 ngày sau Tết.</p>
@@ -55,8 +73,8 @@
             </div>
           </div>
           <div class="content2">
-            <img src="https://media.baoquangninh.vn/upload/image/202203/medium/1950933_qn_15530016.jpg" alt="">
-            <img src="https://media.baoquangninh.vn/upload/image/202309/medium/2127796_bia_nen_09573620.jpg" alt="">
+            <a href=""><img src="https://media.baoquangninh.vn/upload/image/202203/medium/1950933_qn_15530016.jpg" alt=""></a>
+            <a href=""><img src="https://media.baoquangninh.vn/upload/image/202309/medium/2127796_bia_nen_09573620.jpg" alt=""></a>
             <h3 style="font-size: 30px; color: #666666; padding-top: 30px;">Xem Thêm</h3>
             <div class="content2-1">
               <a href="bantinthoisu2.html"><img src="https://cdn-i.vtcnews.vn/resize/CANbelY-ruq65A_uTk4QmGDzI55-sZ-V0/upload/2023/10/17/du-bao-thoi-tiet-tphcm-06375920.jpg" alt=""></a>
@@ -79,31 +97,30 @@
         </div>
         <!-- Footer -->
         <div class="footer">
-            <div class="footer-content">
-              <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="footer-section">
-                <h4>Categories</h4>
-                <ul>
-                  <li>Thời sự</li>
-                  <li>Thời tiết</li>
-                  <li>Thể thao</li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: 123-456-7890</p>
-              </div>
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>About Us</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="footer-section social-media">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-section">
+              <h4>Contact Us</h4>
+              <p>Email: info@gmail.com</p>
+              <p>Phone: 123-456-7890</p>
             </div>
+            <div class="footer-section">
+              <div class="footer-section social-media">
+                  <h4>Follow us</h4>
+                  <div class="footer-section social-media-icon">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
           </div>
+      </div>
+      <div class="information">
+          <h4>Bản quyền được làm bởi M&M </h4>
+      </div>
     </div>
     </div>
 
