@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="gopy.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -33,13 +34,34 @@
                     <input type="text" id="searchInput" placeholder="Tìm kiếm">
                     <button id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
+                <div class="gopy">
+                    <button id="open-feedback-button">Góp ý</button>
+                    <div id="feedback-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="close-feedback">&times;</span>
+                        <h2>Góp ý</h2>
+                        <form>
+                        <label for="name">Tên:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="text" id="phone" name="phone" required>
+                        
+                        <label for="message" >Nội dung góp ý:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="submit">Nộp</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="content">
             <div class="content1">
                 <h1><a href="" style="font-size: 150%; padding-bottom: 16px">Thời sự</a></h1>
                 <a href="bantinthoisu1.html"><img src="https://i1-vnexpress.vnecdn.net/2023/10/17/HUY22961612274548-1697171306-6979-1697534423.jpg?w=680&h=408&q=100&dpr=2&fit=crop&s=b8kLc5ejg3VB4Yu4DVhVjA" alt=""></a>
-                <a href="bantinthoisu1.html"><h1 style="font-size: 46px; line-height: 52px; font-weight: 700;">Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch</h1></a>
+                <a href="bantinthoisu1.html"><h1 style="font-size: 36px; line-height: 52px; font-weight: 700;">Dự kiến trình Chính phủ nghỉ Tết từ 29/12 Âm lịch</h1></a>
                 <ul>
                     <li><a href="#">Lương tối thiểu có thể không kịp điều chỉnh vào ngày 1/1/2024</a></li>
                     <li><a href="#">Rốn lũ Đà Nẵng lại ngập gần một mét</a></li>
@@ -67,7 +89,7 @@
                 <h1><a href="thethao.html" style="font-size: 150%; padding-bottom: 16px">Thể thao</a></h1>
                 <a href="bantinthoisu4.html"><img src="https://cdn-i.vtcnews.vn/resize/UyS5Ytevv34Rd93C_Jt1K72rFgkrMngV0/upload/2023/10/17/ronaldo-06545840.jpg" alt="" style="height: 400px;"></a>
                 <a href="bantinthoisu4.html">
-                    <h3 style="font-size: 30px;">Ronaldo lập cú đúp, Bồ Đào Nha chắc ngôi đầu vòng loại EURO 2024</h3>
+                    <h3 style="font-size: 26px;">Ronaldo lập cú đúp, Bồ Đào Nha chắc ngôi đầu vòng loại EURO 2024</h3>
                 </a>
                 <ul>
                     <li><a href="#">Vòng loại EURO 2024: Italy giành 3 điểm quan trọng</a></li>
@@ -97,14 +119,19 @@
                 <p>Phone: 123-456-7890</p>
               </div>
             </div>
+            <div class="information">
+                <h4>Bản quyền được làm bởi M&M </h4>
+            </div>
             <div class="footer-section social-media">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
+            
           </div>
     </div>
     </div>
+    <script src="gopy.js"></script>
 
 </body>
 </html>
