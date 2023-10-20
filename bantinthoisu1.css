@@ -179,6 +179,10 @@ ul li{
     flex-basis: 75%;
 }
 
+.content1 img{
+    width: 50%;
+}
+
 .content2{
     flex-basis: 25%;
     padding-left: 35px ;
@@ -204,3 +208,20 @@ ul li{
     padding-left: 20px;
     padding-top: 20px;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+
+  /* Áp dụng animation cho các phần tử */
+  .content2 img,
+  .content2 h3,
+  .content2-1 {
+    opacity: 1; /* Đặt opacity ban đầu thành 0 */
+    animation: fadeIn 2s ease-in-out; 
+  }
