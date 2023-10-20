@@ -64,51 +64,28 @@ a:hover {
 
 
 
-.right-nav{
-    flex-basis: 40%;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.weather-container{
-    display: flex;
-    position: relative;
-}
-.weather-container span{
-    display: inline-flex;
-    color: white;
-    align-items: center;
-}
-.weather-container img{
-    width: 35%;
-}
-
-
 .search-box{
+    display: flex;
+    align-items: center;
     margin-top: 12px;
     background-color: #fff;
     border-radius: 12px;
-    /* width: 280px; */
+    width: 280px;
     height: 30px;
 }
-#searchInput {
-    padding: 8px ;
-    border: 0px;
+input{
+    flex: 1;
+    background: transparent;
+    border: 0;
     outline: 0;
-    border-radius: 3px;
-    background: transparent;
+    font-size: 18px;
+    margin-left: 6px;
 }
-
-#searchBtn{
+button{
     background: transparent;
-    border: none;
+    outline: 0;
+    border: 0px;
     cursor: pointer;
-    vertical-align: middle;
-}
-#searchBtn i{
-    margin: 0 8px 0 0;
-    padding: 0;
 }
 
 
@@ -170,6 +147,11 @@ ul li{
     padding-bottom: 20px;
 }
 
+.content1-title img{
+    width: 75%;
+    padding-bottom: 20px;
+}
+
 
 .content{
     display: flex;
@@ -187,6 +169,12 @@ ul li{
 .content2 img{
     width: 100%;
     /* flex-basis: 20%; */
+}
+
+.box{
+    border: 3px solid yellow;
+    background-color: #FEFBF1;
+    text-align: center;
 }
 
 .content2-1{
