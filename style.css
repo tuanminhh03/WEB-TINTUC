@@ -8,7 +8,7 @@ body{
 }
 #main{
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .header{
@@ -146,14 +146,15 @@ ul li{
 .content2{
     flex-basis: 24%;
     margin: 0 24px 0 0;
+    width: 100%;
 }
 
 .content2 img{
-    width: 250%;
+    width: 500px;
 }
 
 .content2 h3{
-    font-size: 40px;
+    font-size: 30px;
 }
 .content3{
     flex-basis: 24%;

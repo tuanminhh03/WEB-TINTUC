@@ -193,7 +193,23 @@ ul li{
     padding-left: 20px;
     padding-top: 20px;
 }
-
+.right-nav{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.weather-container{
+    display: flex;
+    position: relative;
+}
+.weather-container span{
+    display: inline-flex;
+    color: white;
+    align-items: center;
+}
+.weather-container img{
+    width: 35%;
+}
 /* transition */
 @keyframes fadeIn {
     from {
